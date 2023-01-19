@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>registering form</title>
+		<meta name="Description" content="registering form">
+		<style>
+		</style>
+	</head>
+	<body>
+		<form method="post" action="*">
+			<div id="contact">
+				<div>
+					<label for="firstname">Firstname : </label>
+					<input type="text" name="firstname" id="firstname" maxlength="100" placeholder="Your Firstname"/>
+				</div>
+  
+				<div>
+					<label for="name">Name : </label>
+					<input type="text" name="name" id="name" maxlength="100" placeholder="Your Name"/>
+				</div>
+  
+				<div>
+					<label for="age">Age : </label>
+					<input type="age" name="age" id="age" maxlength="150" placeholder="42" />
+				</div>
+				<div>
+					<label for="phone">Phone</label>
+					<input type="phone" name="phone" id="phone" maxlength="150" placeholder="06 29 06 29 06" />
+				</div>
+				<div>
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email" maxlength="150" placeholder="exemple@ema.il" />
+				</div>
+				<div>
+					<label for="student">Student at 42? : </label>
+					<input type="checkbox" name="student" id="student" maxlength="150" placeholder="exemple@ema.il" />
+				</div>
+				<div>
+					<div>
+						<label for="gender_male">Male</label>
+						<input type="radio" id="gender_male" name="gender" value="male">
+						<label for="gender_femaley">Female</label>
+						<input type="radio" id="gender_female" name="gender" value="female">
+						<label for="gender_other">Other</label>
+						<input type="radio" id="gender_other" name="gender" value="other">
+					  </div>
+				</div>
+			</div>
+
+			<br />
+			  
+			<input type="submit" value="Run that sexy Javascript !" id="send" onclick="displayFormContents()">
+		  </form>
+		<script type="text/javascript" src="popup.js"></script>
+	</body>
+</html>

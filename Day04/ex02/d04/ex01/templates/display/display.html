@@ -1,0 +1,9 @@
+{% extends "../base/base.html" %}
+
+{% block title %}
+Ex01: Display process of a static page.
+{% endblock title %}
+
+{% block description %}
+	Lorsqu une url est envoyé celle ci ets intercepté par django comme une requete, dan django le module d url va regqrder quel base de l url a ete entrè pour savoir vers quelle application l utilisateur decide de se rendre, puis adresse une requette a la partie de l application charché de traité l url afin de savoir quelle page de l application a ete demandé et va chercher dans les module views de l application la fonction correspondanty a la vur a generer, celle ci retourne alors un rendu basé sur la requete en chargeant la page html associé a la fonction de rendu de vu correspondant.
+{% endblock description %}

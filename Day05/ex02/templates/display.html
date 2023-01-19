@@ -1,0 +1,23 @@
+{% extends "template.html" %}
+
+{% block core %}
+<table>
+	<thead>
+		<tr>
+			<th>title</th>
+			<th>episode</th>
+			<th>opening crawl</th>
+			<th>director</th>
+			<th>producer</th>
+			<th>release date</th>
+		<tr>
+	</thead>
+	<tbody>
+	{% for row in result %}
+	<tr>
+	{% for column in row %}<td>{{ column }}</td>{% endfor column %}
+	</tr>
+	{% endfor row %}
+	</tbody>
+</table>
+{% endblock core %}

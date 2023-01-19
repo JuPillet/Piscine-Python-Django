@@ -1,0 +1,14 @@
+{% extends "template.html" %}
+
+{% block core %}
+<form action="" method='post'>
+{% csrf_token %}
+<form>
+	<select name="titles_list">
+	{% for elem in result %}
+			<option value="{{ elem }}" name="film_title">{{ elem }}</option>
+	{% endfor row %}
+	<select>
+	<input type="submit" value="Delete the film">
+</form>
+{% endblock core %}

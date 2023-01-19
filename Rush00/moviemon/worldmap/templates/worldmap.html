@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Moviemon</title>
+	<link rel="stylesheet" href="{% static 'worldmap.css' %}">
+</head>
+<body>
+
+	<div class="gameboy">
+		<div class="screen">
+			<div>
+				<table>
+					{% for e in sizeY %}
+						<tr>
+							{% for f in sizeX %}
+								{% if f == posX and e == posY %}
+								<td style="width: 50px; height: 50px; background-color:red; "></td>
+								{% else %}
+								<td style="width: 50px; height: 50px; background-color:green; "></td>
+								{% endif %}
+							{% endfor %}
+						</tr>
+					{% endfor %}
+				</table>
+			</div>
+		</div>
+		<div class="controls">
+			<div class="cross">
+				<span class="left_and_right">
+					{% if posX > 0 %}
+					<a class="direction" href="worldmap/left"></a> <!-- Left -->
+					{% else %}
+					<a class="direction" href="#"></a> <!-- Left -->
+					{% endif %}
+				</span>
+				<span class="up_and_down">
+					{% if posY > 0 %}
+					<a class="direction" href="worldmap/up"></a> <!-- Up -->
+					{% else %}
+					<a class="direction" href="#"></a> <!-- Up -->
+					{% endif %}
+					<span class="direction"></span> <!-- Center (useless) -->
+					{% if posY < lenY %}
+					<a class="direction" href="worldmap/down"></a> <!-- Down -->
+					{% else %}
+					<a class="direction" href="#"></a> <!-- Down -->
+					{% endif %}
+				</span>
+				<span class="left_and_right">
+					{% if posX < lenX %}
+					<a class="direction" href="worldmap/right"></a> <!-- Right -->
+					{% else %}
+					<a class="direction" href="#"></a> <!-- Right -->
+					{% endif %}
+				</span>
+			</div>
+			<a class="oval" href="#"><span>Select</span></a>
+			<a class="oval" href="#"><span>Start</span></a>
+			<a class="circle" href="#"><span class="text_button">B</span></a>
+			<a class="circle" href="#"><span class="text_button">A</span></a>
+		</div>
+	</div>
+		<p>{{ balls }} movieballs</p>
+		<p>{{ phrase }}</p>
+	<div>
+		
+	</div>
+
+</body>
+</html>

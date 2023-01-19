@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Moviemon</title>
+	<link rel="stylesheet" href="{% static 'gameboy.css' %}">
+</head>
+<body>
+
+	<div class="gameboy">
+		<div class="screen">
+			<div class="title">MOVIEMON</div>
+			<div class="commands">
+				<div>A - Start New Game</div>
+				<div>B - Load Game</div>
+			</div>
+		</div>
+		<div class="controls">
+			<div class="cross">
+				<span class="left_and_right">
+					<a class="direction" href="#"></a> <!-- Left -->
+				</span>
+				<span class="up_and_down">
+					<a class="direction" href="#"></a> <!-- Up -->
+					<span class="direction"></span> <!-- Center (useless) -->
+					<a class="direction" href="#"></a> <!-- Down -->
+				</span>
+				<span class="left_and_right">
+					<a class="direction" href="#"></a> <!-- Right -->
+				</span>
+			</div>
+			<a class="oval" href="#"><span>Select</span></a>
+			<a class="oval" href="#"><span>Start</span></a>
+			<a class="circle" href="#"><span class="text_button">B</span></a>
+			<a class="circle" href="worldmap/menu"><span class="text_button">A</span></a>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends "../base/base.html" %}
+
+{% block title %}
+Ex01: Template engine.
+{% endblock title %}
+
+{% block style %}
+	{% load static %}
+	<link href="{% static 'style2.css' %}" rel="stylesheet" type="text/css">
+{% endblock style %}
+
+{% block description %}
+	Le mot template voulant dire paterne ou model, est une page permettant de moduler son contenue en le rendant dinamique.
+	<br/>
+	Pour ce faire la page de substitution va indiquer grace a la balise Django "extends" le template qui servira de base,
+	<br/>
+	Django va alor charger la page qui suit le extends, puis parser celle-ci en remplacant le contenu des block du template par le contenue des blocks de la page de remplissage.
+	<br/>
+	<ul>
+		<li>Block: une balise django permetant de creer une zone de substitution.</li>
+		<li>Loopsfor ... in: une balise django permetant de faire de la meta programation au format python dirrectement dans du code html, semblable a la boucle "for ... in ..."" de python.</li>
+		<li>If controle structur: une balise django permetant de faire de la meta programation au format python dirrectement dans du code html, semblable au mot clef "if" en python, permetant de verifier une condition.</li>
+		<li>The display of the passing context variables: lorcequ'un template est appelé, on peut lui passer des elements en les lui repertoriant sous la forme d une variable django ainsi lorceque l on veut include une page html, on peut lui passer des parametre a l aide du mot clef "with".</li>
+	</ul>
+{% endblock description %}
